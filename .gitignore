@@ -1,0 +1,8 @@
+### Root / IDE & OS files ###
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
