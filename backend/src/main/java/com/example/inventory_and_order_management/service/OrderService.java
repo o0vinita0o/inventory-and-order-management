@@ -32,6 +32,7 @@ public class OrderService {
     @Transactional
     @CacheEvict(value = "products", allEntries = true)
     public OrderResponse createOrder(@Valid OrderRequest request) {
+
         Product product = productRepository.findByIdWithLock(request.productId())
                 .orElseThrow(() -> new IllegalArgumentException("Product not found"));
 
